@@ -10,4 +10,18 @@ def first_stream_table():
    
    df = spark.readStream.table("dlt.source.orders")
    return df
-a
+ 
+@dlt.table(
+  name = 'first_mat_view'
+)
+
+def first_mat_view():
+  
+  df = dlt.read("streaming_table")
+
+
+
+
+
+
+
